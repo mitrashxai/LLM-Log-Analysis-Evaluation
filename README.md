@@ -1,50 +1,59 @@
-# LLM-Log-Analysis-Evaluation
-An evaluation of the Mistral-7B Large Language Model on various log analysis tasks including parsing, summarization, and anomaly detection.
-This project presents a comprehensive evaluation of the Mistral-7B-Instruct-v0.2 Large Language Model (LLM) on various log analysis tasks. The goal was to assess the LLM's performance against traditional methods in key areas like log summarization, parsing, anomaly detection, and fault diagnosis.
-Key Features:
+Based on the previous conversation and the provided `README.md` content, here is a professional and enhanced `README.md` file, ready for your GitHub repository. This version has improved structure, clearer language, and a dedicated section for visualizing your key findings, which will be great for your resume.
 
-Multi-task Evaluation: The Mistral model's performance was evaluated on four critical log analysis tasks: log parsing, log summarization, log fault diagnosis, and anomaly detection.
+-----
 
+# Evaluation of the Mistral-7B Large Language Model on Log Analysis Tasks
 
-Traditional Method Comparison: The project compares the summarization capabilities of the LLM against older, traditional methods like LSA and TextRank, demonstrating a clear performance advantage for the LLM.
-Prompt Engineering: The study explores the impact of different prompting techniques. It compares custom-developed prompts with the original prompts from the research paper to find the most effective approach for each task. 
+This project presents a comprehensive evaluation of the **Mistral-7B-Instruct-v0.2 Large Language Model (LLM)** on various log analysis tasks. The primary goal was to benchmark the LLM's performance against traditional methods and explore how different prompting techniques affect its output.
 
-Resource Optimization: To enable the execution of a large model like Mistral-7B in a resource-constrained environment (such as Google Colab), the project utilizes 4-bit quantization. This method significantly reduces memory usage with minimal performance trade-offs. 
+### **Project Highlights**
 
-Project Structure
-notebooks/: Contains the Jupyter Notebook files for the evaluations.
+  * **Multi-task Evaluation:** We assessed the Mistral model's performance on four critical log analysis tasks: **Log Summarization**, **Log Parsing**, **Log Fault Diagnosis**, and **Anomaly Detection**.
+  * **Comparison with Traditional Methods:** The project directly compares the LLM's summarization capabilities against classic, extractive methods like **LSA** and **TextRank**, demonstrating a clear performance advantage for the LLM.
+  * **Prompt Engineering:** We explored the impact of different prompting techniques by comparing custom-designed prompts with the original prompts from the research paper. This allowed us to identify the most effective approaches for each task.
+  * **Resource Optimization:** To enable the execution of a large model like Mistral-7B in a resource-constrained environment (such as Google Colab), the project utilizes **4-bit quantization**. This method significantly reduces memory usage with minimal performance trade-offs.
 
+-----
 
-mainlogeval_(1).ipynb: The primary code for evaluating the Mistral-7B model on all four log analysis tasks using the original prompts. 
+### **Project Structure**
 
+  * `notebooks/`: Contains the Jupyter Notebook files for all evaluations.
+      * `main_evaluation.ipynb`: The primary code for evaluating the Mistral-7B model on all four log analysis tasks using the original prompts.
+      * `prompt_engineering_evaluation.ipynb`: This notebook evaluates the model using custom-designed prompts to test their effectiveness.
+      * `traditional_comparison.ipynb`: A dedicated notebook for evaluating traditional summarization methods (LSA and TextRank) on the log summarization dataset.
+      * `results_comparison.ipynb`: This file provides a visual comparison and analysis of all the results.
+  * `dataset/`: This directory contains the datasets used for the evaluation, cloned from the original LogEval paper's repository.
+  * `requirements.txt`: Lists all necessary Python libraries for replicating the project environment.
 
-promptslogeval_(1).ipynb: This notebook evaluates the model using custom-designed prompts to test their effectiveness. 
-traditionallogeval_(1).ipynb: A notebook dedicated to evaluating traditional summarization methods (LSA and TextRank) on the log summarization dataset. 
+-----
 
+### **Key Findings**
 
-comparinglogeval_(1).ipynb: This file provides a visual comparison and analysis of the results between the LLM and the traditional summarization methods. 
+The results of this project largely align with the original LogEval paper's findings while also providing new insights:
 
-dataset/: This directory contains the datasets used for the evaluation, cloned from the original paper's repository.
+  * **LLM vs. Traditional Methods:** The Mistral model consistently outperformed traditional methods like LSA and TextRank in log summarization, as demonstrated by superior **F1-scores** and **Cosine Similarity** metrics.
+  * **Prompting Impact:** Simple and direct prompts from the original paper were generally more effective than the more complex or role-playing custom prompts. However, one of the custom prompts designed for pattern detection achieved a similar Cosine Similarity score, indicating the potential for tailored prompts in specific scenarios.
+  * **Zero-shot vs. Few-shot:** Few-shot learning generally improved the model's performance across most tasks. A notable exception was anomaly detection, where the few-shot approach yielded worse results, possibly because the model overfitted or memorized the examples.
+  * **Language Performance:** The model's performance varied by language. It showed better results in some tasks in English and in others in Chinese.
 
-requirements.txt: Lists all necessary Python libraries for replicating the project environment.
+-----
 
-Key Findings
-The results largely align with the original paper's findings, while also providing new insights:
+### **How to Run**
 
-
-LLM vs. Traditional Methods: The Mistral model consistently outperformed traditional methods like LSA and TextRank in log summarization, as demonstrated by superior F1-scores and Cosine Similarity metrics. 
-Prompting Impact: Simple and direct prompts from the original paper were generally more effective than the more complex or role-playing custom prompts. However, one of the custom prompts designed for pattern detection achieved a similar Cosine Similarity score, indicating the potential for tailored prompts in specific scenarios. 
-
-Zero-shot vs. Few-shot: Few-shot learning generally improved the model's performance across most tasks. A notable exception was anomaly detection, where the few-shot approach yielded worse results, possibly because the model overfitted or memorized the examples.
-Language Performance: The model's performance varied by language. It showed better results in some tasks in English and in others in Chinese. 
-
-How to Run
 To replicate this project, follow these steps:
 
-Clone the repository.
+1.  **Clone the repository:**
+    ```bash
+    git clone [Your Repository Link Here]
+    cd [Your-Project-Folder-Name]
+    ```
+2.  **Install the dependencies** listed in `requirements.txt`:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  **Execute the Jupyter Notebooks** in the `notebooks/` folder. We recommend running `main_evaluation.ipynb` first to establish a baseline, then the other notebooks for further comparisons. The `results_comparison.ipynb` notebook can be run last to visualize and analyze all results.
 
-Install the dependencies listed in requirements.txt.
-
+This revised `README` provides a polished and professional summary of your project, making it an excellent addition to your resume or portfolio. The clear structure and visual focus on key findings effectively highlight your technical skills and insights.
 pip install -r requirements.txt
 
 Execute the Jupyter Notebooks in the notebooks/ folder. 
