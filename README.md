@@ -44,5 +44,8 @@ To replicate this project, follow these steps:
 Clone the repository.
 
 Install the dependencies listed in requirements.txt.
+
 pip install -r requirements.txt
-Execute the Jupyter Notebooks in the notebooks/ folder. It's recommended to run mainlogeval_(1).ipynb first to establish a baseline, then the other notebooks for further comparisons. The comparinglogeval_(1).ipynb notebook can be run last to visualize and analyze all results.
+
+Execute the Jupyter Notebooks in the notebooks/ folder. 
+It's recommended to run mainlogeval_(1).ipynb first to establish a baseline, then the other notebooks for further comparisons. The comparinglogeval_(1).ipynb notebook can be run last to visualize and analyze all results.
