@@ -49,9 +49,5 @@ To replicate this project, follow these steps:
     pip install -r requirements.txt
     ```
 3.  **Execute the Jupyter Notebooks** in the `notebooks/` folder. We recommend running `main_evaluation.ipynb` first to establish a baseline, then the other notebooks for further comparisons. The `results_comparison.ipynb` notebook can be run last to visualize and analyze all results.
-
-This revised `README` provides a polished and professional summary of your project, making it an excellent addition to your resume or portfolio. The clear structure and visual focus on key findings effectively highlight your technical skills and insights.
+focus on key findings effectively highlight your technical skills and insights.
 pip install -r requirements.txt
-
-Execute the Jupyter Notebooks in the notebooks/ folder. 
-It's recommended to run mainlogeval_(1).ipynb first to establish a baseline, then the other notebooks for further comparisons. The comparinglogeval_(1).ipynb notebook can be run last to visualize and analyze all results.
